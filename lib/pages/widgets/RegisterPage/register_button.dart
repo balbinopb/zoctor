@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:zoctor/core/app_pallete.dart';
+import 'package:zoctor/core/app_palette.dart';
 
 class RegisterButton extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const RegisterButton({Key? key, required this.onPressed}) : super(key: key);
+  const RegisterButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -13,16 +13,19 @@ class RegisterButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppPallete.black,
+          backgroundColor: AppPalette.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
-            side: const BorderSide(color: Color.fromARGB(255, 0, 255, 195), width: 4),
+            side: const BorderSide(
+              color: AppPalette.tealAccent,
+              width: 4,
+            ),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
         ),
         child: const Text(
           'REGISTER',
-          style: TextStyle(color: AppPallete.white),
+          style: TextStyle(color: Colors.white),
         ),
       ),
     );

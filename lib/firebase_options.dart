@@ -41,46 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAjFsWj_CFWDDiP0S2PKazviNHD_tnksmI',
-    appId: '1:368339589147:web:e40b61c6e70de937d380be',
-    messagingSenderId: '368339589147',
-    projectId: 'zoctor-c5390',
-    authDomain: 'zoctor-c5390.firebaseapp.com',
-    storageBucket: 'zoctor-c5390.appspot.com',
+    apiKey: 'AIzaSyDmMEtYEyt1GTWqcF6ZaWSHb6j5-1gF_vA',
+    appId: '1:1003762409882:web:8703c90d8aa9b113009a23',
+    messagingSenderId: '1003762409882',
+    projectId: 'zoctor-7b59d',
+    authDomain: 'zoctor-7b59d.firebaseapp.com',
+    storageBucket: 'zoctor-7b59d.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCw4XuG9qLwZ8NtL4AdAla2x8hJUWaDYlg',
-    appId: '1:368339589147:android:264e26ce1806c774d380be',
-    messagingSenderId: '368339589147',
-    projectId: 'zoctor-c5390',
-    storageBucket: 'zoctor-c5390.appspot.com',
+    apiKey: 'AIzaSyADxiJLCAb_0Ta83XmdjkpplLdbZSaEp1g',
+    appId: '1:1003762409882:android:0607bba0356a36d3009a23',
+    messagingSenderId: '1003762409882',
+    projectId: 'zoctor-7b59d',
+    storageBucket: 'zoctor-7b59d.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD1e0w1NvqXM4dJGYUPxQshXAXD9kJBYGQ',
-    appId: '1:368339589147:ios:53f69e82302e53bad380be',
-    messagingSenderId: '368339589147',
-    projectId: 'zoctor-c5390',
-    storageBucket: 'zoctor-c5390.appspot.com',
+    apiKey: 'AIzaSyCBF-DYy8fP81oslz3w3yNdxPO0lMHn89M',
+    appId: '1:1003762409882:ios:fb31eea35b308955009a23',
+    messagingSenderId: '1003762409882',
+    projectId: 'zoctor-7b59d',
+    storageBucket: 'zoctor-7b59d.firebasestorage.app',
     iosBundleId: 'com.example.zoctor',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD1e0w1NvqXM4dJGYUPxQshXAXD9kJBYGQ',
-    appId: '1:368339589147:ios:53f69e82302e53bad380be',
-    messagingSenderId: '368339589147',
-    projectId: 'zoctor-c5390',
-    storageBucket: 'zoctor-c5390.appspot.com',
+    apiKey: 'AIzaSyCBF-DYy8fP81oslz3w3yNdxPO0lMHn89M',
+    appId: '1:1003762409882:ios:fb31eea35b308955009a23',
+    messagingSenderId: '1003762409882',
+    projectId: 'zoctor-7b59d',
+    storageBucket: 'zoctor-7b59d.firebasestorage.app',
     iosBundleId: 'com.example.zoctor',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAjFsWj_CFWDDiP0S2PKazviNHD_tnksmI',
-    appId: '1:368339589147:web:8de4c8bea8797213d380be',
-    messagingSenderId: '368339589147',
-    projectId: 'zoctor-c5390',
-    authDomain: 'zoctor-c5390.firebaseapp.com',
-    storageBucket: 'zoctor-c5390.appspot.com',
+    apiKey: 'AIzaSyDmMEtYEyt1GTWqcF6ZaWSHb6j5-1gF_vA',
+    appId: '1:1003762409882:web:b7a0fcf141b090cf009a23',
+    messagingSenderId: '1003762409882',
+    projectId: 'zoctor-7b59d',
+    authDomain: 'zoctor-7b59d.firebaseapp.com',
+    storageBucket: 'zoctor-7b59d.firebasestorage.app',
   );
 }

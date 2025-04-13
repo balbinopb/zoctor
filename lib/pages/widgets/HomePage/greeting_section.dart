@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoctor/core/app_pallete.dart';
+import 'package:zoctor/core/app_palette.dart';
 
 class GreetingSection extends StatelessWidget {
   const GreetingSection({super.key});
@@ -8,7 +8,7 @@ class GreetingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
-      color: AppPallete.tealAccent,
+      color: AppPalette.tealAccent,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -20,7 +20,7 @@ class GreetingSection extends StatelessWidget {
                 children: [
                   Text(
                     'Welcome back!',
-                    style: TextStyle(color: AppPallete.black, fontSize: 18),
+                    style: TextStyle(color: AppPalette.black, fontSize: 18),
                   ),
                   
                 ],
@@ -31,17 +31,17 @@ class GreetingSection extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             decoration: BoxDecoration(
-              color: AppPallete.black,
+              color: AppPalette.black,
               borderRadius: BorderRadius.circular(10.0),
             ),
             child: const TextField(
               decoration: InputDecoration(
-                icon: Icon(Icons.search, color: AppPallete.teal),
+                icon: Icon(Icons.search, color: AppPalette.teal),
                 hintText: 'Search...',
-                hintStyle: TextStyle(color: AppPallete.white, fontSize: 18),
+                hintStyle: TextStyle(color: AppPalette.white, fontSize: 18),
                 border: InputBorder.none,
               ),
-              style: TextStyle(color: AppPallete.white, fontSize: 18),
+              style: TextStyle(color: AppPalette.white, fontSize: 18),
             ),
           ),
         ],

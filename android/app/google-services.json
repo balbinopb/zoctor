@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "368339589147",
-    "project_id": "zoctor-c5390",
-    "storage_bucket": "zoctor-c5390.appspot.com"
+    "project_number": "1003762409882",
+    "project_id": "zoctor-7b59d",
+    "storage_bucket": "zoctor-7b59d.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:368339589147:android:264e26ce1806c774d380be",
+        "mobilesdk_app_id": "1:1003762409882:android:0607bba0356a36d3009a23",
         "android_client_info": {
           "package_name": "com.example.zoctor"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCw4XuG9qLwZ8NtL4AdAla2x8hJUWaDYlg"
+          "current_key": "AIzaSyADxiJLCAb_0Ta83XmdjkpplLdbZSaEp1g"
         }
       ],
       "services": {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../core/app_pallete.dart';
 
 class RoundedInputField extends StatelessWidget {
   final String hintText;
@@ -17,14 +16,14 @@ class RoundedInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppPallete.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(30),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: AppPallete.black.withOpacity(0.2),
+            color: Colors.black12,
             blurRadius: 3,
             spreadRadius: 3,
-            offset: const Offset(0, 3),
+            offset: Offset(0, 3),
           ),
         ],
       ),
@@ -42,3 +41,7 @@ class RoundedInputField extends StatelessWidget {
     );
   }
 }
+
+
+
+

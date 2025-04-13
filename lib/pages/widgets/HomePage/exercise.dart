@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/app_pallete.dart';
+import '../../../core/app_palette.dart';
 
 class Exercise extends StatelessWidget {
   final String label;
@@ -13,7 +13,7 @@ class Exercise extends StatelessWidget {
       height: 100,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-        color: AppPallete.grey[200],
+        color: AppPalette.grey[200],
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Center(
