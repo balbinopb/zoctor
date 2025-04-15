@@ -4,7 +4,7 @@ import 'dart:convert';
 
 
 class ApiService {
-  final String baseUrl = 'https://your-api-url.com';
+  final String baseUrl = 'https://test-api-url.com';
 
   Future<Doctor> fetchDoctorData(String doctorId) async {
     final response = await http.get(Uri.parse('$baseUrl/doctors/$doctorId'));

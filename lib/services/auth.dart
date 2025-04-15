@@ -5,7 +5,13 @@ class AuthServices {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  //sign in with email & password
+  //Getter to access the current user
+  User? get currentUser => _firebaseAuth.currentUser;
+
+  //Getter to access the current user's display name
+  String? get currentUsername => _firebaseAuth.currentUser?.displayName;
+
+  //Sign in with email & password
   Future<User?> signInWithEmailAndPassword(String email, String password) async {
     try {
       final userCredential = await _firebaseAuth.signInWithEmailAndPassword(
@@ -24,34 +30,43 @@ class AuthServices {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) return null;
 
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
 
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
-      final UserCredential result =
-          await _firebaseAuth.signInWithCredential(credential);
+      final UserCredential result = await _firebaseAuth.signInWithCredential(credential);
       return result.user;
     } catch (e) {
-      throw Exception("Google sign-in failed");
+      throw Exception("Google sign-in failed: $e");
     }
   }
 
-  //register with email & password
+  //Register with email & password and set display name
   Future<User?> registerWithEmailAndPassword(String email, String password, String displayName) async {
-  final userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
-    email: email,
-    password: password,
-  );
-  if (userCredential.user != null) {
-    await userCredential.user!.updateProfile(displayName: displayName);
-    return userCredential.user;
+    try {
+      final userCredential = await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      final user = userCredential.user;
+      if (user != null) {
+        await user.updateDisplayName(displayName);
+        await user.reload(); //important to reload to get updated info
+        return _firebaseAuth.currentUser; //return reloaded user
+      }
+      return null;
+    } on FirebaseAuthException catch (e) {
+      throw Exception(e.message);
+    }
   }
-  return null;
-}
 
-
+  /// Sign out
+  Future<void> signOut() async {
+    await _firebaseAuth.signOut();
+    await _googleSignIn.signOut();
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'widgets/HomePage/doctor_section.dart';
 import 'widgets/HomePage/exercise_section.dart';
@@ -8,7 +9,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+
+    final user = FirebaseAuth.instance.currentUser;
+    final name = user?.displayName ?? 'User';
+
+    return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -16,7 +21,7 @@ class HomePage extends StatelessWidget {
               GreetingSection(),
               SizedBox(height: 20),
               DoctorSection(
-                name: 'Dr. Alexa Sharma',
+                name: 'Dr. $name',
                 profession: 'Heart Specialist',
                 image: 'assets/images/alexa.png',
               ),

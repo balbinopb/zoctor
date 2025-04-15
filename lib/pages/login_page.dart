@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zoctor/controller/login_controller.dart'; // Your controller
+import 'package:zoctor/controller/login_controller.dart';
+import 'package:zoctor/routes/app_routes.dart';
 
 class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
@@ -116,7 +117,7 @@ class LoginPage extends GetView<LoginController> {
                   children: [
                     const Text("Don't have an account?"),
                     GestureDetector(
-                      onTap: () => Get.toNamed('/register'),
+                      onTap: () => Get.toNamed(AppRoutes.register),
                       child: const Text(
                         " Register now",
                         style: TextStyle(color: Colors.teal),

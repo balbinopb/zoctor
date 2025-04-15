@@ -57,7 +57,7 @@ class DoctorSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      profession,//why this error
+                      profession,
                       style: const TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
